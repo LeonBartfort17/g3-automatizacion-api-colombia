@@ -30,7 +30,7 @@ def timeout():
     return REQUEST_TIMEOUT
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def api_get(api_session, base_url, timeout):
     """
     Fixture de conveniencia: devuelve una función que arma la URL
