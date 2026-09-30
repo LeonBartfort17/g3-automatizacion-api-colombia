@@ -1,0 +1,21 @@
+# Entorno virtual (cada quien crea el suyo con requirements.txt)
+venv/
+env/
+.venv/
+
+# Variables de entorno con datos propios
+.env
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Caché de pytest
+.pytest_cache/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
