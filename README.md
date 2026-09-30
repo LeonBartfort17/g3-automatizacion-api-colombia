@@ -6,22 +6,12 @@ corra como una sola suite.
 
 ## Qué se hizo en esta consolidación
 
-1. **Se completaron los 8 endpoints que faltaban** (los de Oscar David
-   Motta Falla, que nunca llegaron): `City/{id}`, `City/name/{name}`,
-   `City/search/{keyword}`, `Airport/name/{name}`,
-   `Airport/search/{keyword}`, `UrbanCenter`, `PostalCode`, `Map/{id}`.
-   Casos documentados como `FN-017` a `FN-024`.
 
-2. **Se reconstruyó `utils/asserts.py` y la fixture `api_get`**, que los
-   5 archivos de Jorge Iván Garzón usaban pero nunca llegaron incluidos
-   en su entrega — sin esto, la mitad de la suite no corría para nadie
-   más que él.
-
-3. **Se reemplazó la versión vieja de `test_contrato_alta_prioridad.py`**
+ **Se reemplazó la versión vieja de `test_contrato_alta_prioridad.py`**
    por la versión corregida (con `xfail` para el bug conocido de los
    500), que venía desactualizada en el zip.
 
-4. **Se verificó que no hubiera IDs de caso de prueba (`FN-XXX`)
+ **Se verificó que no hubiera IDs de caso de prueba (`FN-XXX`)
    duplicados entre los 3 archivos Excel** — confirmado: 24 hojas, 24
    IDs únicos, sin colisiones.
 
@@ -55,24 +45,21 @@ config.py                              # 24 endpoints Alta, IDs reales verificad
 conftest.py                            # fixtures: api_session, api_get, base_url, timeout
 requirements.txt
 tests/
-  test_contrato_alta_prioridad.py      # contrato genérico (200+JSON) de los 24, con xfail
-  test_country.py                      # Jorge
-  test_president.py                    # Jorge
-  test_constitution.py                 # Jorge
-  test_holiday.py                      # Jorge
-  test_touristicattraction.py          # Jorge
-  test_department.py                   # Juan Andrés
-  test_region.py                       # Juan Andrés
-  test_city.py                         # Juan Andrés (lista) + Oscar David (id/name/search)
-  test_airport.py                      # Oscar David (nuevo)
-  test_urbancenter.py                  # Oscar David (nuevo)
-  test_postalcode.py                   # Oscar David (nuevo)
-  test_map.py                          # Oscar David (nuevo)
+  test_contrato_alta_prioridad.py      
+  test_country.py                      
+  test_president.py                    
+  test_constitution.py                
+  test_holiday.py                      
+  test_touristicattraction.py         
+  test_department.py                   
+  test_region.py                      
+  test_city.py                         
+  test_airport.py                      
+  test_urbancenter.py                  
+  test_postalcode.py                   
+  test_map.py                          
 utils/
-  asserts.py                           # reconstruido (faltaba en la entrega de Jorge)
-casos_de_prueba_G3_ALTA_CONSOLIDADO.xlsx    # FN-001 a FN-024, sin duplicados
-reporte_hallazgos_G3_CONSOLIDADO.xlsx       # HZ-G3-001, HZ-G3-002 (ampliado)
-```
+ 
 
 ## Pendiente antes de dar la tarea por cerrada
 
